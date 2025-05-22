@@ -47,6 +47,6 @@ class Agenda:
         if posicion != -1:
             user = self.registro[posicion]
             print("--- Información del Usuario ---")
-            print(user)  # The __str__ method of Usuario is called automatically
+            print(user)
         else:
             print(f"El usuario con ID {id} no se encontró en la agenda.")
