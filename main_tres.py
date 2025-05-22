@@ -4,7 +4,7 @@ from fecha import Fecha
 from direccion import Direccion
 
 if __name__ == "__main__":
-    agenda = Agenda(5)
+    agenda = Agenda()
 
     fecha1 = Fecha(22, 3, 1992)
     dir1 = Direccion("Avenida Siempre Viva", "742", "Springfield", "Ciudad Capital", "Casa Amarilla", "1A")

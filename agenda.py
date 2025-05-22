@@ -1,19 +1,17 @@
 from usuario import Usuario
 
 class Agenda:
-    def __init__(self, capacity):
-        self.registro = [None] * capacity
+    def __init__(self):
+        self.registro = []
         self.no_reg = 0
 
     def agregar(self, u):
         if self.buscar(u.get_id()) != -1:
             return False
-        if self.no_reg < len(self.registro):
-            self.registro[self.no_reg] = u
-            self.no_reg += 1
-            return True
-        else:
-            return False
+        
+        self.registro.append(u)
+        self.no_reg += 1
+        return True
 
     def buscar(self, id):
         for i in range(self.no_reg):
@@ -26,9 +24,7 @@ class Agenda:
         if posicion_a_eliminar == -1:
             return False
         else:
-            for i in range(posicion_a_eliminar, self.no_reg - 1):
-                self.registro[i] = self.registro[i + 1]
-            self.registro[self.no_reg - 1] = None
+            del self.registro[posicion_a_eliminar]
             self.no_reg -= 1
             return True
 
