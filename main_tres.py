@@ -36,3 +36,7 @@ if __name__ == "__main__":
 
     agenda.mostrar_usuario(user1.get_id())
     agenda.mostrar_usuario(user5.get_id())
+
+    agenda.eliminar(user2.get_id())
+    
+    agenda.mostrar()
