@@ -1,0 +1,25 @@
+from fecha import Fecha
+from direccion import Direccion
+from usuario import Usuario
+
+nombre = input("Ingrese el nombre completo del usuario: ")
+id_usuario = int(input("Ingrese el ID del usuario: "))
+dia = int(input("Ingrese el día de nacimiento del usuario: "))
+mes = int(input("Ingrese el mes de nacimiento del usuario: "))
+year = int(input("Ingrese el año de nacimiento del usuario: "))
+ciudad = input("Ingrese la ciudad de nacimiento del usuario: ")
+tel = int(input("Ingrese el teléfono celular del usuario: "))
+correo = input("Ingrese el correo electrónico del usuario: ")
+print("A continuación ingrese los siguientes datos de la dirección del usuario: ")
+calle = input("Calle o Carrera: ")
+nom = input("Nomenclatura: ")
+edificio = input("Edificio: ")
+apto = input("Apartamento: ")
+barrio = input("Barrio: ")
+ciudad_res = input("Ciudad: ")
+print()
+fecha2 = Fecha(dia, mes, year)
+dir2 = Direccion(calle, nom, barrio, ciudad_res, edificio, apto)
+user2 = Usuario(nombre, id_usuario, fecha2, ciudad, tel, correo, dir2)
+sUser2 = str(user2)
+print(sUser2)
